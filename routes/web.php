@@ -12,8 +12,7 @@
 */
 
 Route::get('/', function () {
-    return redirect()
-    ->route('todos.index');
+    return redirect()->route('todos.index');
 });
 
 Route::get('/todos','TodoController@index')->name('todos.index');
@@ -23,3 +22,9 @@ Route::get('/todos/{id}','TodoController@show')->name('todos.show');
 Route::get('todos/{id}/edit','TodoController@edit')->name('todos.edit');
 Route::put('todos/{id}','TodosController@update')->name('todos.update');
 Route::delete('todos/{id}', 'TodosController@destroy')->name('todos.destroy');
+
+//Auth::routes(['verify' => true]);
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+Route::get('/home', 'HomeController@index')->name('home');
