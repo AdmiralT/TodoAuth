@@ -9,7 +9,7 @@ use Storage;
 
 class ProfileController extends Controller
 {
-    public funcion __construct() {
+    public function __construct() {
       $this->middleware('auth');
     }
 
@@ -48,7 +48,6 @@ class ProfileController extends Controller
       }
       $user->save();
       return redirect()
-        ->route('profile.index');
-        ->with('status', 'Your profile has been updated.');
+        ->route('profile.index')->with('status', 'Your profile has been updated.');
     }
 }

@@ -22,7 +22,7 @@ Route::get('/todos/{id}','TodoController@show')->name('todos.show');
 Route::get('todos/{id}/edit','TodoController@edit')->name('todos.edit');
 Route::put('todos/{id}','TodosController@update')->name('todos.update');
 Route::delete('todos/{id}', 'TodosController@destroy')->name('todos.destroy');
-Route::get('/profile','ProfileController@index')->name('profille.index');
+Route::get('/profile','ProfileController@index')->name('profile.index');
 Route::put('/profile','ProfileController@update')->name('profile.update');
 
 //Auth::routes(['verify' => true]);
